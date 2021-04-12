@@ -1,15 +1,34 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './app.css';
 import Habits from './components/habits';
 import Nav from './components/nav';
 
 const App = () => {
   //useState
-  const [habits, setHabits] = useState([
-    { id: 1, name: 'Reading', count: 0 },
-    { id: 2, name: 'Running', count: 0 },
-    { id: 3, name: 'Coding', count: 0 },
-  ]);
+  const [habits, setHabits] = useState([]);
+
+  //useEffect
+  useEffect(() => {
+    getLocalHabits();
+  }, []);
+
+  useEffect(() => {
+    saveLocalHabits();
+  }, [habits]);
+
+  // localStorage
+  const saveLocalHabits = () => {
+    localStorage.setItem('habits', JSON.stringify(habits));
+  };
+
+  const getLocalHabits = () => {
+    if (localStorage.getItem('habits') === null) {
+      localStorage.setItem('habits', JSON.stringify([]));
+    } else {
+      let localHabits = JSON.parse(localStorage.getItem('habits'));
+      setHabits(localHabits);
+    }
+  };
 
   //functions
   const handleIncrement = useCallback(habit => {
