@@ -74,7 +74,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div className="app">
       <Nav totalCount={habits.filter(item => item.count > 0).length} />
       <Habits
         habits={habits}
@@ -84,7 +84,7 @@ const App = () => {
         onAdd={handleAdd}
         onReset={handleReset}
       />
-    </>
+    </div>
   );
 };
 

@@ -15,7 +15,6 @@ const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
 
   const { name, count } = habit;
 
-  console.log(`habit: ${name}`);
   return (
     <li className="habit">
       <span className="habit-name">{name}</span>

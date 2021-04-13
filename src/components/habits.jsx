@@ -10,8 +10,6 @@ const Habits = ({
   onDelete,
   onReset,
 }) => {
-  console.log('habits');
-
   return (
     <div className="habits">
       <HabitAddForm onAdd={onAdd} />
