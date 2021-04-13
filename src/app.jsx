@@ -21,14 +21,14 @@ const App = () => {
     localStorage.setItem('habits', JSON.stringify(habits));
   };
 
-  const getLocalHabits = () => {
+  const getLocalHabits = useCallback(() => {
     if (localStorage.getItem('habits') === null) {
       localStorage.setItem('habits', JSON.stringify([]));
     } else {
       let localHabits = JSON.parse(localStorage.getItem('habits'));
       setHabits(localHabits);
     }
-  };
+  }, []);
 
   //functions
   const handleIncrement = useCallback(habit => {

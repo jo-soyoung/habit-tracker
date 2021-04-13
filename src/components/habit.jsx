@@ -1,20 +1,21 @@
 import React, { memo } from 'react';
 
-const Habit = memo(props => {
+const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
   const handleIncrement = () => {
-    props.onIncrement(props.habit);
+    onIncrement(habit);
   };
 
   const handleDecrement = () => {
-    props.onDecrement(props.habit);
+    onDecrement(habit);
   };
 
   const handleDelete = () => {
-    props.onDelete(props.habit);
+    onDelete(habit);
   };
 
-  const { name, count } = props.habit;
+  const { name, count } = habit;
 
+  console.log(`habit: ${name}`);
   return (
     <li className="habit">
       <span className="habit-name">{name}</span>
