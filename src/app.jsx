@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     saveLocalHabits();
-  }, [habits]);
+  }, []);
 
   // localStorage
   const saveLocalHabits = () => {
@@ -31,6 +31,17 @@ const App = () => {
   }, []);
 
   //functions
+  //check whether the count is 21.
+  const checkCounts = useCallback(() => {
+    const habit = habits.map(habit => {
+      return habit;
+    });
+    console.log(habit);
+    if (habit.count === 3) {
+      console.log(`You've done ${habit.name} for 3 times!`);
+    }
+  });
+
   const handleIncrement = useCallback(habit => {
     setHabits(habits =>
       habits.map(item => {
