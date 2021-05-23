@@ -35,18 +35,18 @@ body {
 
 /* Header */
 .navbar {
-  padding: 3rem;
+  padding: 3em;
   text-align: center;
 }
 
 .navbar h1 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.8em;
   font-size: 2.5rem;
   color: #396f57;
 }
 
 .navbar p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
   font-weight: 300;
   color: #646368;
 }
@@ -65,8 +65,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
-  /* border: 1px solid #333; */
+  position: relative;
+  padding: 3em 0;
 }
 
 .habits > * {
@@ -78,7 +78,7 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 .add-input,
@@ -101,7 +101,7 @@ body {
 
 /* Habit */
 .habits > ul {
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
   font-size: 1.5rem;
 }
 
@@ -119,9 +119,9 @@ body {
   display: inline-block;
   text-align: center;
   font-size: 1.3rem;
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
   margin-right: 1em;
   background-color: #396f57;
   color: #fff;
