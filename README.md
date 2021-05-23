@@ -9,4 +9,4 @@ Habit tracking app made with React JS
 * [x] Reset habits
 * [x] Habits persistance
 * [x] Auto completion of the habit which has done 21 times
-* [ ] Responsive web
+* [x] Responsive web
