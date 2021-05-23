@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import styles from './habitAddForm.module.css';
 
 const HabitAddForm = memo(props => {
   const formRef = React.createRef();
@@ -12,14 +13,14 @@ const HabitAddForm = memo(props => {
   };
 
   return (
-    <form ref={formRef} className="add-form" onSubmit={onSubmit}>
+    <form ref={formRef} className={styles.addForm} onSubmit={onSubmit}>
       <input
         ref={inputRef}
         type="text"
         placeholder="Habit"
-        className="add-input"
+        className={styles.addInput}
       />
-      <button className="add-button">Add</button>
+      <button className={styles.addButton}>Add</button>
     </form>
   );
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './deleteBtn.module.css';
 
 const DeleteBtn = ({ habit, onDelete }) => {
   const handleDelete = () => {
@@ -6,7 +7,10 @@ const DeleteBtn = ({ habit, onDelete }) => {
   };
 
   return (
-    <button className="habit-button habit-delete" onClick={handleDelete}>
+    <button
+      className={`${styles.habitButton} ${styles.habitDelete}`}
+      onClick={handleDelete}
+    >
       <i className="fas fa-trash"></i>
     </button>
   );

@@ -1,6 +1,7 @@
-import React, { memo, useCallback } from 'react';
-import DeleteBtn from './deleteBtn';
-import PopUp from './pop-up/popUp';
+import React, { memo } from 'react';
+import styles from './habit.module.css';
+import DeleteBtn from '../delete-btn/deleteBtn';
+import PopUp from '../pop-up/popUp';
 
 const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
   const { name, count } = habit;
@@ -15,17 +16,17 @@ const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
 
   return (
     <>
-      <li className="habit">
-        <span className="habit-name">{name}</span>
-        <span className="habit-count">{count}</span>
+      <li className={styles.habit}>
+        <span className={styles.habitName}>{name}</span>
+        <span className={styles.habitCount}>{count}</span>
         <button
-          className="habit-button habit-increase"
+          className={`${styles.habitButton} ${styles.habitIncrease}`}
           onClick={handleIncrement}
         >
           <i className="fas fa-plus-square"></i>
         </button>
         <button
-          className="habit-button habit-decrease"
+          className={`${styles.habitButton} ${styles.habitDecrease}`}
           onClick={handleDecrement}
         >
           <i className="fas fa-minus-square"></i>
@@ -33,7 +34,7 @@ const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
         <DeleteBtn habit={habit} onDelete={onDelete} />
       </li>
 
-      {habit.count === 21 && <PopUp habit={habit} onDelete={onDelete} />}
+      {habit.count >= 21 && <PopUp habit={habit} onDelete={onDelete} />}
     </>
   );
 });

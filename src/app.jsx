@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './app.css';
-import Habits from './components/habits';
-import Nav from './components/nav';
+import Habits from './components/habits/habits';
+import Header from './components/header/header';
 
 const App = () => {
   //useState
@@ -74,7 +74,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Nav totalCount={habits.filter(item => item.count > 0).length} />
+      <Header totalCount={habits.filter(item => item.count > 0).length} />
       <Habits
         habits={habits}
         onIncrement={handleIncrement}
