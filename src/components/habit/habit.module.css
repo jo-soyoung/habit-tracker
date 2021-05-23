@@ -37,3 +37,27 @@
 .habitDecrease {
   color: #cc7f41;
 }
+
+/* Media Query */
+@media screen and (max-width: 540px) {
+  .habit {
+    font-size: 1.2rem;
+  }
+
+  .habitName {
+    margin-right: 0.5em;
+  }
+
+  .habitCount {
+    font-size: 0.9rem;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8em;
+    margin-right: 1.6em;
+  }
+
+  .habitButton {
+    margin-right: 0.3em;
+    font-size: 1.6rem;
+  }
+}

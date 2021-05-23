@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -25%);
-  width: 80%;
+  width: 40%;
   height: 10em;
   padding: 1em;
   background-color: #fff;
@@ -23,4 +23,16 @@
 
 .box p {
   margin-bottom: 1.5em;
+}
+
+/* Media Query */
+@media screen and (max-width: 540px) {
+  .box {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .box p {
+    font-size: 0.8rem;
+  }
 }

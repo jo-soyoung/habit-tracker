@@ -30,3 +30,16 @@ body {
   overflow: hidden;
   min-height: 0;
 }
+
+/* Media Query */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+  }
+}

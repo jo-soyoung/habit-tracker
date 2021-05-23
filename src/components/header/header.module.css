@@ -23,3 +23,23 @@
 .headerCount {
   color: #cc7f41;
 }
+
+/* Media Query */
+@media screen and (max-width: 540px) {
+  .header {
+    padding: 2em 1.5em;
+  }
+
+  .header h1 {
+    margin-bottom: 0.2em;
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    margin-bottom: 0.8em;
+  }
+
+  .headerCountAnnounce {
+    font-size: 1.2rem;
+  }
+}
