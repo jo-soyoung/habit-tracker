@@ -73,7 +73,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
+    <div className="container">
       <Header totalCount={habits.filter(item => item.count > 0).length} />
       <Habits
         habits={habits}

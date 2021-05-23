@@ -14,7 +14,7 @@ const Habits = ({
   return (
     <div className={styles.habits}>
       <HabitAddForm onAdd={onAdd} />
-      <ul>
+      <ul className={styles.habitsList}>
         {habits.map(habit => (
           <Habit
             key={habit.id}
